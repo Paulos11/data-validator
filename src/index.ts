@@ -1,6 +1,6 @@
 // src/index.ts
 
-interface ValidationRule {
+export interface ValidationRule {
   required?: boolean;
   type?: "string" | "number" | "boolean" | "object" | "array";
   minLength?: number;
@@ -13,17 +13,17 @@ interface ValidationRule {
   nested?: ValidationSchema;
 }
 
-interface ValidationSchema {
+export interface ValidationSchema {
   [key: string]: ValidationRule;
 }
 
-interface ValidationResult {
+export interface ValidationResult {
   isValid: boolean;
   errors: string[];
   validatedData: any;
 }
 
-class DataValidator {
+export class DataValidator {
   private schema: ValidationSchema;
 
   constructor(schema: ValidationSchema) {
@@ -154,4 +154,3 @@ class DataValidator {
   }
 }
 
-export { DataValidator, ValidationRule, ValidationSchema, ValidationResult };

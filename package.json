@@ -4,13 +4,14 @@
   "description": "A lightweight, flexible data validation library for JavaScript",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "type": "module",
   "scripts": {
-    "build": "tsc",
-    "test": "jest",
+    "build": "bun build ./src/index.ts --outdir ./dist --target node",
+    "test": "bun test",
     "lint": "eslint src/**/*.ts",
-    "prepare": "npm run build",
-    "prepublishOnly": "npm test && npm run lint",
-    "coverage": "jest --coverage"
+    "prepare": "bun run build",
+    "prepublishOnly": "bun run test && bun run lint",
+    "coverage": "bun test --coverage"
   },
   "keywords": [
     "validation",
@@ -22,12 +23,10 @@
   "author": "YOUR_NAME",
   "license": "MIT",
   "devDependencies": {
-    "@types/jest": "^29.5.11",
-    "@typescript-eslint/eslint-plugin": "^6.15.0",
-    "@typescript-eslint/parser": "^6.15.0",
-    "eslint": "^8.56.0",
-    "jest": "^29.7.0",
-    "ts-jest": "^29.1.1",
-    "typescript": "^5.3.3"
+    "@typescript-eslint/eslint-plugin": "^7.2.0",
+    "@typescript-eslint/parser": "^7.2.0",
+    "bun-types": "latest",
+    "eslint": "^8.57.0",
+    "typescript": "~5.3.3"
   }
 }
