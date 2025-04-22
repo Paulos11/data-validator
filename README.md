@@ -13,7 +13,11 @@ A lightweight, type-safe validation library for TypeScript/JavaScript applicatio
 ## Installation
 
 ```bash
+# Using npm
 npm install @sunillakandri/data-validator
+
+# Using Bun
+bun add @sunillakandri/data-validator
 ```
 
 ## Quick Start
@@ -70,6 +74,27 @@ const schema = {
     },
   },
 };
+```
+
+## Development
+
+This project uses [Bun](https://bun.sh) for development, testing, and building.
+
+### Setup
+
+```bash
+# Install dependencies
+bun install
+```
+
+### Development Commands
+
+```bash
+# Build the project
+bun run build
+
+# Run tests
+bun run test
 ```
 
 ## License

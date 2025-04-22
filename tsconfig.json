@@ -1,15 +1,17 @@
 {
-   "compilerOptions": {
-     "target": "es2018",
-     "module": "commonjs",
-     "declaration": true,
-     "outDir": "./dist",
-     "strict": true,
-     "esModuleInterop": true,
-     "skipLibCheck": true,
-     "forceConsistentCasingInFileNames": true,
-     "rootDir": "./src"
-   },
-   "include": ["src/**/*"],
-   "exclude": ["node_modules", "**/*.test.ts"]
- }
+  "compilerOptions": {
+    "target": "es2022",
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "declaration": true,
+    "outDir": "./dist",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "rootDir": "./src",
+    "types": ["bun-types"]
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "**/*.test.ts"]
+}
